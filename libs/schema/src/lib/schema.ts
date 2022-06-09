@@ -6,7 +6,7 @@ export interface I_Store {
   count_discounts_given: number
   count_discounts_used: number
   count_store_purchases: number
-  current_discount_id: string
+  current_discount_id?: string
   nth: number
 }
 
