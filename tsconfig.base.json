@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@schema": ["libs/schema/src/index.ts"],
       "@zipee-commerce/api-interfaces": ["libs/api-interfaces/src/index.ts"]
     }
   },
