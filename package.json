@@ -9,7 +9,8 @@
     "serve-app-customer": "nx serve app-customer",
     "serve-app-admin": "nx serve app-admin",
     "build": "nx build",
-    "test": "nx test"
+    "test-sequence": "npx nx run-many --all --target=test",
+    "test-parallel": "npx nx run-many --all --target=test --parallel"
   },
   "private": true,
   "dependencies": {
