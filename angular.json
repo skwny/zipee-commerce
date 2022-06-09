@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "api": "apps/api",
+    "api-interfaces": "libs/api-interfaces",
+    "app-admin": "apps/app-admin",
+    "app-admin-e2e": "apps/app-admin-e2e",
+    "app-customer": "apps/app-customer",
+    "app-customer-e2e": "apps/app-customer-e2e"
+  }
+}
