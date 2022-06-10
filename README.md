@@ -41,4 +41,4 @@ To serve the Admin app, execute the command `npm run serve-app-admin` in a termi
 <br/>
 
 ### Testing
-To run all tests, execute the command `npm run test-sequence`, or `npm run test-parallel`.
+To run all tests, execute the command `npm run test-sequence`, or `npm run test-parallel`. Testing is still in progress. To be continued.
