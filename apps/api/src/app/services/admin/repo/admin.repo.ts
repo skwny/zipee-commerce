@@ -54,6 +54,8 @@ export class Admin_Repo {
 
   increment_discounts_used() {
     this._store_db.count_discounts_used += 1
+    // A discount used indicates a store purchase took palce.
+    this.increment_store_purchases()
   }
 
   increment_store_purchases() {
