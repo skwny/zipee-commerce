@@ -14,7 +14,7 @@ export interface I_Customer {
   id: string
   count_purchase: number
   // This is the foreign key for I_Discount collection id
-  discount?: string
+  discount_id?: string
 }
 
 export interface I_Discount {
