@@ -1,12 +1,14 @@
 
 
 # Zipee Commerce
-This project was generated using [Nx](https://nx.dev).
+This project was generated using [Nx](https://nx.dev). It consists of two Angular applications (one for customers and one for admin), and an API built with NestJS.
 
 <br/>
 
 ## Quick Start & Documentation
-Clone this repo to your local machine, open a terminal window and change to the directory containing the repo, and execute `npm install` in the terminal.
+This project is not yet Dockerized so ensure you're system has Node and NPM installed.
+
+Clone this repo to your local machine, open a terminal window, change to the directory containing the repo, and execute `npm install` in the terminal.
 
 <br/>
 
@@ -27,8 +29,8 @@ ___
 
 <br/>
 
-### Running the Frontends
-This project currently has two apps: one for Customers and one for Admin. However, these apps do not yet have functionality. To be continued.
+### Running the clients.
+This project currently has two apps: one for Customers and one for Admin. However, these apps do not yet have functionality.
 
 <br/>
 
@@ -41,4 +43,4 @@ To serve the Admin app, execute the command `npm run serve-app-admin` in a termi
 <br/>
 
 ### Testing
-To run all tests, execute the command `npm run test-sequence`, or `npm run test-parallel`. Testing is still in progress. To be continued.
+To run all tests, execute the command `npm run test-sequence`, or `npm run test-parallel`. Testing is still in progress.
