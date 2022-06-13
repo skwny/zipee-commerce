@@ -1,7 +1,7 @@
+import { Customer_Service_Module } from './customer.module'
 import { I_Discount, I_Customer } from '@schema'
 import { Test } from '@nestjs/testing'
 import { Customer_Http_Service } from './customer.service'
-import { Customer_Http_Controller } from './customer.controller'
 import { INestApplication } from '@nestjs/common'
 import * as request from 'supertest'
 import { CUSTOMER_CONTROLLER, customer_discount, customer_discount_purchase, customer_purchase } from '@zipee-commerce/api-interfaces'
@@ -9,12 +9,11 @@ import { CUSTOMER_CONTROLLER, customer_discount, customer_discount_purchase, cus
 describe('Controller tests', () => {
   const ctrl = CUSTOMER_CONTROLLER
   let app: INestApplication
-  let mock_http_service: any = {}
+  let mock_http_service: Customer_Http_Service
 
   beforeAll(async () => {
     const module = await Test.createTestingModule({
-      controllers: [Customer_Http_Controller],
-      providers: [Customer_Http_Service],
+      imports: [Customer_Service_Module]
     })
     .overrideProvider(Customer_Http_Service)
     .useValue(mock_http_service)
@@ -83,6 +82,6 @@ describe('Controller tests', () => {
     return request(app.getHttpServer())
       .post(`/${ctrl}`)
       .expect(201)
-      .expect(mock_http_service.create_customer('customer_id'))
+      .expect(mock_http_service.create_customer())
   })
 })
