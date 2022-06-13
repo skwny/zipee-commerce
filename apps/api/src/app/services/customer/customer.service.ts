@@ -10,10 +10,6 @@ export class Customer_Http_Service {
     private readonly _admin_repo: Admin_Repo,
   ) {}
 
-  create_customer() {
-    return this._customer_repo.create_customer()
-  }
-
   private _get_customer(customer_id: string) {
     const customer = this._customer_repo
       .get_customer_by_id(customer_id)
@@ -37,10 +33,14 @@ export class Customer_Http_Service {
     return discount
   }
 
+  create_customer() {
+    return this._customer_repo.create_customer()
+  }
+
   get_customer_discount(customer_id: string) {
     const customer = this._get_customer(customer_id)
 
-    if (!customer.discount_id) return
+    if (!customer.discount_id) return null
 
     // * Note we'd normally make an RPC call to a separate Admin service.
     const discount = this._get_discount(customer.discount_id)
@@ -51,7 +51,6 @@ export class Customer_Http_Service {
   purchase(customer_id: string) {
     const purchase_count = this._customer_repo
       .increment_purchase_count(customer_id)
-
 
     const store = this._admin_repo.get_store()
 
